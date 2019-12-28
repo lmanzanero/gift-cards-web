@@ -17,10 +17,9 @@ import CheckOut from './components/CheckoutConfirmation';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL  + '/'}>
       <div className="App">
-        <AppNavbar />
-          <Switch>
+        <AppNavbar /> 
             <Route exact path="/">
               <GiftCards/>
             </Route>
@@ -29,8 +28,7 @@ function App() {
             </Route>
             <Route path="/check-out">
               <CheckOut/>
-            </Route>
-          </Switch>
+            </Route> 
         <Footer/>
       </div>
     </Router>

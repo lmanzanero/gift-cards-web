@@ -8,12 +8,10 @@ export default class CheckOut extends Component {
         return ( 
             <Container>
                 <Row>
-                    <Col xs="6">
-                        Card Image
+                    <Col xs="6"> 
                     </Col>
 
-                    <Col xs="6">
-                        Google Play Gift Card
+                    <Col xs="6"> 
                     </Col>
                 </Row>
             </Container>

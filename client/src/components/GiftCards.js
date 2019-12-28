@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
+import { Link } from 'react-router-dom'
 // import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
 
@@ -33,11 +34,11 @@ export default class GiftCards extends Component {
          <h4>Select a Gift Card</h4>
          <hr className="my-2" />
         <div className="gift-cards-items"> 
-          <a href="/gift-card/google-play-card">
+          <Link to="/gift-card/google-play-card">
             <div className="gift-cards-item">
               <img src="https://lh3.googleusercontent.com/7Rp8nh8n5Y3DdY-YM01O0gSDqa-BwKYlKGzwPMlBvFsOaaHYfVdQ4uJhs-AY_w07dZdsnTFz8XIYeBZ6w7RGfwJeVTt93ISin6rXHA=s0" alt="card"/>
             </div> 
-          </a>
+          </Link>
           <div className="gift-cards-item">
             <img src="https://mk0avenuetjo4k1o6nk6.kinstacdn.com/wp-content/uploads/sites/26/2017/10/Amazon.com-gift-card.png" alt="card"/>
           </div>
