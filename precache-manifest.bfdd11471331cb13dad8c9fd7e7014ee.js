@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b9a2820d198fb82c277ce217219c9d9",
+    "revision": "bdde134de0b3ba311ac6753a2eda9e4e",
     "url": "/gift-cards-web/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gift-cards-web/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "15e31b3d62416d285b04",
+    "revision": "221ce88ad9392d5b4b14",
     "url": "/gift-cards-web/static/css/main.57432353.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gift-cards-web/static/js/2.5aa0b1db.chunk.js"
   },
   {
-    "revision": "15e31b3d62416d285b04",
-    "url": "/gift-cards-web/static/js/main.adc102bd.chunk.js"
+    "revision": "221ce88ad9392d5b4b14",
+    "url": "/gift-cards-web/static/js/main.490b1f73.chunk.js"
   },
   {
     "revision": "2dbe5adab797bbfdc5d7",
