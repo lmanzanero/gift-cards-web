@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/gift-cards-web/static/css/main.57432353.chunk.css",
+    "main.js": "/gift-cards-web/static/js/main.adc102bd.chunk.js",
+    "main.js.map": "/gift-cards-web/static/js/main.adc102bd.chunk.js.map",
+    "runtime-main.js": "/gift-cards-web/static/js/runtime-main.3ade5b63.js",
+    "runtime-main.js.map": "/gift-cards-web/static/js/runtime-main.3ade5b63.js.map",
+    "static/css/2.0624914a.chunk.css": "/gift-cards-web/static/css/2.0624914a.chunk.css",
+    "static/js/2.5aa0b1db.chunk.js": "/gift-cards-web/static/js/2.5aa0b1db.chunk.js",
+    "static/js/2.5aa0b1db.chunk.js.map": "/gift-cards-web/static/js/2.5aa0b1db.chunk.js.map",
+    "index.html": "/gift-cards-web/index.html",
+    "precache-manifest.224374d1b219770d038a4d39d3004819.js": "/gift-cards-web/precache-manifest.224374d1b219770d038a4d39d3004819.js",
+    "service-worker.js": "/gift-cards-web/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/gift-cards-web/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.57432353.chunk.css.map": "/gift-cards-web/static/css/main.57432353.chunk.css.map"
+  }
+}
