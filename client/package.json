@@ -1,4 +1,5 @@
 {
+  "homepage": "http://lmanzanero.github.io/gift-cards-web",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -6,12 +7,15 @@
     "bootstrap": "^4.3.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
     "react-transition-group": "^4.3.0",
     "reactstrap": "^8.0.1",
     "uuid": "^3.3.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -31,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }

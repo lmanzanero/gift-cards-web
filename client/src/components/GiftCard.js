@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 // import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
 
-export default class CheckOut extends Component { 
+export default class GiftCard extends Component { 
     render() { 
         return ( 
             <Container>
