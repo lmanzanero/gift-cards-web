@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "10cefbfd539472e45736386f2613480c",
+    "revision": "f3d8f386466d143addeaeb30ce005929",
     "url": "/gift-cards-web/index.html"
   },
   {
-    "revision": "1e73b49fdca18a14df37",
+    "revision": "905af7ef71fe8a6267c4",
     "url": "/gift-cards-web/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "fe5ad0a3d93f608a66c3",
+    "revision": "ad764fcf9552a7d9b631",
     "url": "/gift-cards-web/static/css/main.eb406d23.chunk.css"
   },
   {
-    "revision": "1e73b49fdca18a14df37",
-    "url": "/gift-cards-web/static/js/2.252417d9.chunk.js"
+    "revision": "905af7ef71fe8a6267c4",
+    "url": "/gift-cards-web/static/js/2.63dbd090.chunk.js"
   },
   {
-    "revision": "fe5ad0a3d93f608a66c3",
-    "url": "/gift-cards-web/static/js/main.1208b517.chunk.js"
+    "revision": "ad764fcf9552a7d9b631",
+    "url": "/gift-cards-web/static/js/main.cf92b8f2.chunk.js"
   },
   {
     "revision": "2dbe5adab797bbfdc5d7",
