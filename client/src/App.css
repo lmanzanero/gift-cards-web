@@ -1,3 +1,9 @@
+.App {
+  margin-left: 67px;
+  margin-right: 67px;
+  margin-bottom: 67px;
+}
+
 .remove-btn {
   margin-right: 0.5rem;
 }
@@ -189,6 +195,23 @@
 }
 
 /* Card before checkout */
+
+.hero-image-container {
+  position: relative;
+  display: block;
+  background: #EEEEEE; 
+  height: 651px;
+}
+
+
+.hero-image-container img {
+  position: absolute;
+  width: 341px;
+  height: 471.61px;
+  left: 22%;
+  top: 14%;
+}
+
 .main-button {
   width: 216px;
   height: 46px;
@@ -202,4 +225,103 @@
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 23px;
   color: #FFFFFF;
+}
+
+.form-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin-left: 50px; 
+  margin-top: 15px;
+}
+
+.form-inner label {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;  
+  margin-right: 23px;
+}
+
+.form-inner select {
+  width: 188.22px;
+  height: 32px; 
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-left: 17px;
+}
+ 
+.form-inner input[type=text] { 
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 6px;  
+}
+
+.form-inner input[type=number] {
+  width: 87.81px;
+  height: 32px; 
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-left: 17px;
+  padding-left: 14px;
+}
+
+.form-inner textarea {
+  width: 278.81px;
+  height: 62px; 
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-left: 10px; 
+  padding-left: 14px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group #message-label {
+  position: relative;
+  bottom: 30px;
+}
+
+.form-group #amount {
+  width: 58px;
+  height: 36px; 
+  border: 1px solid #C4C4C4; 
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-left: 17px;
+  text-align: center;
+}
+
+.form-group #amount::placeholder {
+  color: #000000;
+}
+
+.form-group #to {
+  width: 280.37px;
+  height: 32px;
+  margin-left: 53px;
+  padding-left: 14px;
+}
+
+.form-group #from {
+  width: 278.37px;
+  height: 32px;
+  margin-left: 35px;
+  padding-left: 14px;
+}  
+
+.form-inner .main-button { 
+  margin-top: 30px; 
 }

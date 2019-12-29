@@ -29,8 +29,8 @@ function App() {
             <Route path="/check-out">
               <CheckOut/>
             </Route> 
-        <Footer/>
       </div>
+      <Footer/>
     </Router>
   );
 }

@@ -17,7 +17,7 @@ class AppNavbar extends Component {
   render () {
     return (
       <div>
-         <Container> 
+         <Container fluid={true}> 
            <h1 className="main-title"><Link to="/">Gift Cards <br/>Belize</Link></h1>
            <p className="sub-title">Purchase cards with your Oblip account</p>
 
