@@ -333,13 +333,13 @@
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 15px;
   color: #000000;
 }
 
 .purchase-confirmation-box { 
-  height: 400px;  
-  margin-top: 27px;
+  height: 400px;   
+  margin-right: 93px;
 }
 
 .purchase-confirmation-box .hero-container {
@@ -368,14 +368,14 @@
 }
 
 .order-details-box {
-  margin-top: 25px;
-  width: 316px;
+  margin-top: 25px; 
+  width: 100%;
   height: 301px; 
   border: 1px solid #E3E3E3;
   box-sizing: border-box;
 }
 
-.order-details-box .title {
+.order-details-box .header-title {
   margin: 23px;
   font-family: Helvetica;
   font-style: normal;
@@ -389,7 +389,7 @@
   margin: 23px;
 }
 
-.table-box-right .title {
+.table-box-right .table-title {
   font-family: Helvetica;
   font-style: normal;
   font-weight: normal;
@@ -397,6 +397,7 @@
   line-height: 16px;
   color: #000000;
 }
+ 
 
 .table-box-right .value {
   font-family: Helvetica;
@@ -405,7 +406,26 @@
   font-size: 12px;
   line-height: 14px; 
   padding-left: 20px;
-  padding-top: 8px;
+  padding-top: 3px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.table-box-left .table-title {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.table-box-left .value{
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;  
+  padding-top: 3px;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -418,9 +438,9 @@
 } 
 
 .table-box-left table td{
-  padding-top: 10px; 
+  padding-top: 15px; 
 }
 
 .table-box-right table td {
-  padding-bottom: 22px; 
+  padding-bottom: 15px; 
 }
