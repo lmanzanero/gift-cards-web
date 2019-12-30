@@ -19,3 +19,8 @@ You can run the server and the client at the same time for developement
 ```
 npm run dev
 ```
+### Deploy new Changes
+cd client
+```
+npm run deploy
+```
