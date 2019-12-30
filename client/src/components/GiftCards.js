@@ -29,8 +29,9 @@ export default class GiftCards extends Component {
   }
 
   render() {
+    console.log(this.props.routes)
     return (
-      <Container className="gift-cards-container">
+      <Container className="gift-cards-container" fluid={true}>
          <h4>Select a Gift Card</h4>
          <hr className="my-2" />
         <div className="gift-cards-items"> 
