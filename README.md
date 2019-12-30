@@ -1,6 +1,6 @@
 # Gift Cards Web
 
-A simple shopping list demo using MongoDB, Express, ReactJs, NodeJs
+A e-commernce web demo using MongoDB, Express, ReactJs, NodeJs
 
 
 ### Installation
