@@ -1,4 +1,4 @@
-# Shopping List
+# Gift Cards Web
 
 A simple shopping list demo using MongoDB, Express, ReactJs, NodeJs
 
