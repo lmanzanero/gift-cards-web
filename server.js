@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const dbURI = require('./config/keys').mongoURI;
+const dbURI = require('./config/dev_keys').mongoURI;
 
 // routes
 const items = require('./routes/api/items');
