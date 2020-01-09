@@ -1,3 +1,4 @@
 module.exports = {
-  mongoURI: '<mongodb_connection_string>'
+    mongoURI: 'YOUR_OWN_MONGO_URI',
+    secretOrKey: 'YOUR_OWN_SECRET'
 }
