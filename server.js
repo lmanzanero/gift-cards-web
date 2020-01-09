@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const dbURI = require('./config/keys').mongoURI;
 
 // routes
-const items = require('./routes/api/items');
+const orders = require('./routes/api/orders');
 
 // initialize app
 const app = express();
@@ -18,7 +18,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.log(err));
 
 // use routes
-app.use('/api/items', items);
+app.use('/api/orders', orders);
 
 // set port
 const port = process.env.PORT || 5000;
