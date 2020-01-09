@@ -37,10 +37,10 @@ export default class GiftCard extends Component {
                                     <Row>
                                        <div className="form-group">
                                        <label for="amount">Amount</label> 
-                                            <input type="text" id="amount" name="firstname" placeholder="$25" align="right"/>
-                                            <input type="text" id="amount" name="firstname" placeholder="$50"/>
-                                            <input type="text" id="amount" name="firstname" placeholder="$75"/>
-                                            <input type="text" id="amount" name="firstname" placeholder="$100"/> 
+                                            <button>$25</button>
+                                            <button>$50</button>
+                                            <button>$75</button>
+                                            <button>$100</button>
                                        </div>
                                     </Row>
 

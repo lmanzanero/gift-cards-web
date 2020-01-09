@@ -294,7 +294,7 @@
   bottom: 30px;
 }
 
-.form-group #amount {
+.form-group button {
   width: 58px;
   height: 36px; 
   border: 1px solid #C4C4C4; 
@@ -302,10 +302,6 @@
   border-radius: 6px;
   margin-left: 17px;
   text-align: center;
-}
-
-.form-group #amount::placeholder {
-  color: #000000;
 }
 
 .form-group #to {
