@@ -1,6 +1,6 @@
-# Shopping List
+# Gift Cards Web
 
-A simple shopping list demo using MongoDB, Express, ReactJs, NodeJs
+A e-commernce web demo using MongoDB, Express, ReactJs, NodeJs
 
 
 ### Installation
@@ -18,4 +18,9 @@ npm run client-install
 You can run the server and the client at the same time for developement
 ```
 npm run dev
+```
+### Deploy new Changes
+cd client
+```
+npm run deploy
 ```
