@@ -5,6 +5,31 @@ import { Link } from 'react-router-dom'
 import uuid from 'uuid';
 
 export default class GiftCard extends Component { 
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          country: "",
+          amount: "",
+          email: "",
+          from: "",
+          message: "",
+          quantity: ""
+        };
+      }
+
+    getOrderDetails = (e) => {
+        e.preventDefault()
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    saveOrder = () => {
+        console.log(this.state)
+    }
+
+
     render() { 
         return ( 
             <Container fluid={true}>
@@ -25,9 +50,10 @@ export default class GiftCard extends Component {
                                 <div className="form-inner">
                                     <Row>
                                         <div className="form-group">
-                                        <label for="region">Country</label>
-                                        <select id="country" name="country">
-                                            <option value="australia">Australia</option>
+                                        <label>Country</label>
+                                        <select id="country" name="country" preventDefault="true" value={this.state.country} onChange={(e) => this.getOrderDetails(e)}>
+                                            <option >Choose a country</option>
+                                            <option value="belize">Belize</option>
                                             <option value="canada">Canada</option>
                                             <option value="usa">USA</option>
                                         </select>
@@ -36,42 +62,48 @@ export default class GiftCard extends Component {
                                 
                                     <Row>
                                        <div className="form-group">
-                                       <label for="amount">Amount</label> 
-                                            <button>$25</button>
-                                            <button>$50</button>
-                                            <button>$75</button>
-                                            <button>$100</button>
+                                       <label>Amount</label> 
+                                            <button name="amount" onClick={(e) => this.getOrderDetails(e)} value="25">$25</button>
+                                            <button name="amount" onClick={(e) => this.getOrderDetails(e)} value="50">$50</button>
+                                            <button name="amount" onClick={(e) => this.getOrderDetails(e)} value="75">$75</button>
+                                            <button name="amount" onClick={(e) => this.getOrderDetails(e)} value="100">$100</button>
                                        </div>
                                     </Row>
 
                                     <Row>
                                         <div className="form-group">
-                                        <label for="to">To</label>
-                                        <input type="text" id="to" name="firstname" placeholder="Enter your email address"/>
+                                        <label>To</label>
+                                        <input type="text" id="to" name="email" placeholder="Enter your email address"
+                                            onChange={(e) => this.getOrderDetails(e)}
+                                        />
                                         </div>
                                     </Row>
 
                                     <Row>
                                        <div className="form-group">
-                                       <label for="from">From</label>
-                                        <input type="text" id="from" name="firstname" placeholder="Your name"/>
+                                       <label>From</label>
+                                        <input type="text" id="from" name="from" placeholder="Your name"
+                                          onChange={(e) => this.getOrderDetails(e)}
+                                        />
                                        </div>
                                     </Row>
 
                                     <Row>
                                         <div className="form-group">
-                                        <label id="message-label" for="message">Message</label>
-                                        <textarea rows="4" cols="50" id="message" name="message">I hope you enjoy this gift</textarea>
+                                        <label id="message-label" >Message</label>
+                                             <textarea rows="4" cols="50" id="message" name="message" onChange={(e) => this.getOrderDetails(e)}></textarea>
                                         </div>
                                     </Row>
 
                                     <Row>
                                         <div className="form-group">
                                         <label for="quantity">Quantity</label>
-                                        <input type="number" id="quantity" name="firstname" placeholder="1"/>
+                                        <input type="number" id="quantity" name="quantity" placeholder="0" min="0"  
+                                          onChange={(e) => this.getOrderDetails(e)}
+                                        />
                                         </div>
                                     </Row>
-                                    <Link to="/check-out"><button className="main-button">Buy Now</button></Link>
+                                    <Link ><button className="main-button" onClick={(e) => this.saveOrder()}>Buy Now</button></Link>
                                 </div>
                             </form>
                          </Container>
