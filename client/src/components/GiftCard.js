@@ -25,11 +25,6 @@ export default class GiftCard extends Component {
         })
     }
 
-    saveOrder = () => {
-        console.log(this.state)
-    }
-
-
     render() { 
         return ( 
             <Container fluid={true}>
@@ -97,13 +92,13 @@ export default class GiftCard extends Component {
 
                                     <Row>
                                         <div className="form-group">
-                                        <label for="quantity">Quantity</label>
+                                        <label >Quantity</label>
                                         <input type="number" id="quantity" name="quantity" placeholder="0" min="0"  
                                           onChange={(e) => this.getOrderDetails(e)}
                                         />
                                         </div>
                                     </Row>
-                                    <Link ><button className="main-button" onClick={(e) => this.saveOrder()}>Buy Now</button></Link>
+                                    <Link to={{pathname:'/check-out', state:{...this.state}}}><button className="main-button">Buy Now</button></Link>
                                 </div>
                             </form>
                          </Container>

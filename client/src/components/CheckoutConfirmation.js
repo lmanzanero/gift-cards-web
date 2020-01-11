@@ -3,9 +3,53 @@ import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 // import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
+const order = {
+    "name": "Amazon Gift Card",
+    "date": "Current Date",
+    "to": "Luis Manzanero",
+    "from": "Reggie Escobar",
+    "message": "Here is your gift",
+    "quantity": 1,
+    "region": "BZ",
+    "serviceFee": 3,
+    "total": 100
+}
 
-export default class CheckOut extends Component { 
+export default class CheckOut extends Component {  
+    // state = {
+    //     {
+    //         "name": "Amazon Gift Card",
+    //         "date": "Current Date",
+    //         "to": "Luis Manzanero",
+    //         "from": "Reggie Escobar",
+    //         "message": "Here is your gift",
+    //         "quantity": 1,
+    //         "region": "BZ",
+    //         "serviceFee": 3,
+    //         "total": 100
+    //     }
+    // }
+
+ 
+
+    saveOrdertoDb = () => {
+        fetch('http://localhost:5000/api/orders/check-out', {
+        method: 'POST', // or 'PUT' 
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(order),
+        }) 
+        .then((data) => {
+        console.log('Success:', data);
+        })
+        .catch((error) => {
+        console.error('Error:', error);
+        }); 
+    }
+
     render() { 
+        const { country, amount, email, from, message, quantity } = this.props.location.state 
         return ( 
             <Container className="confirmation-container" fluid={true}>
                 <Row>
@@ -28,15 +72,15 @@ export default class CheckOut extends Component {
                                             <table> 
                                                 <tr>
                                                     <td className="table-title">To:</td>
-                                                    <td className="value">christine.wei1995@gmail.com</td>
+                                                    <td className="value">{email}</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="table-title">From:</td>
-                                                    <td className="value">Reggie Escobar</td>
+                                                    <td className="value">{from}</td>
                                                 </tr>  
                                                 <tr>
                                                     <td className="table-title">Message:</td>
-                                                    <td className="value">I hope your enjoy this gift!</td>
+                                                    <td className="value">{message}</td>
                                                 </tr>  
                                             </table> 
                                         </div>
@@ -46,15 +90,15 @@ export default class CheckOut extends Component {
                                             <table> 
                                                 <tr>
                                                     <td className="table-title">Amount:</td>
-                                                    <td className="value"> $25</td>
+                                                    <td className="value"> ${amount}</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="table-title">Quantity:</td>
-                                                    <td className="value">1</td>
+                                                    <td className="value">{quantity}</td>
                                                 </tr>  
                                                 <tr>
                                                     <td className="table-title">Region:</td>
-                                                    <td className="value">USA</td>
+                                                    <td className="value">{country}</td>
                                                 </tr>  
                                             </table> 
                                         </div>
@@ -97,7 +141,7 @@ export default class CheckOut extends Component {
                             </div>
                         </div>
                         <br/>
-                        <Link to="/"><button className="main-button">Buy Now</button></Link>
+                        <button className="main-button" onClick={() => this.saveOrdertoDb()}>Buy Now</button>
                     </Col>
                 </Row>
             </Container>

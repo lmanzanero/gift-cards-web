@@ -26,9 +26,7 @@ function App() {
             <Route path="/gift-card/:id">
               <GiftCard/>
             </Route>
-            <Route path="/check-out">
-              <CheckOut/>
-            </Route> 
+            <Route path="/check-out" component={CheckOut}/> 
       </div>
       <Footer/>
     </Router>
