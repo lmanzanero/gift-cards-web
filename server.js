@@ -8,8 +8,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // routes
-const orders = require('./routes/api/orders');
 const root = require('./routes/api/root')
+const giftcards = require('./routes/api/giftcards')
+const orders = require('./routes/api/orders');
+
 
 // initialize app
 const app = express();
@@ -23,7 +25,8 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   .catch(err => console.log(err));
 
 // use routes
-app.use('/', root)
+app.use('/', root);
+app.use('/v1/giftcards', giftcards);
 app.use('/v1/orders', orders);
 
 // set port
