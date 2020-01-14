@@ -1,10 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const dbURI = require('./config/keys').mongoURI;
+
+// load environment variables in dev
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 
 // routes
 const orders = require('./routes/api/orders');
+const root = require('./routes/api/root')
 
 // initialize app
 const app = express();
@@ -13,12 +18,13 @@ const app = express();
 app.use(bodyParser.json());
 
 // connect to Mongo
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MonogoDB connected...'))
   .catch(err => console.log(err));
 
 // use routes
-app.use('/api/orders', orders);
+app.use('/', root)
+app.use('/v1/orders', orders);
 
 // set port
 const port = process.env.PORT || 5000;
