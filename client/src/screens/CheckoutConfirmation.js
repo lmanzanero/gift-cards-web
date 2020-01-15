@@ -16,37 +16,22 @@ const order = {
 }
 
 export default class CheckOut extends Component {  
-    // state = {
-    //     {
-    //         "name": "Amazon Gift Card",
-    //         "date": "Current Date",
-    //         "to": "Luis Manzanero",
-    //         "from": "Reggie Escobar",
-    //         "message": "Here is your gift",
-    //         "quantity": 1,
-    //         "region": "BZ",
-    //         "serviceFee": 3,
-    //         "total": 100
-    //     }
-    // }
 
- 
-
-    saveOrdertoDb = () => {
-        fetch('http://localhost:5000/api/orders/check-out', {
-        method: 'POST', // or 'PUT' 
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(order),
-        }) 
-        .then((data) => {
-        console.log('Success:', data);
-        })
-        .catch((error) => {
-        console.error('Error:', error);
-        }); 
-    }
+  saveOrdertoDb = () => {
+    fetch('http://localhost:5000/api/orders/check-out', {
+      method: 'POST', // or 'PUT' 
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(order),
+    }) 
+    .then((data) => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    }); 
+  }
 
     render() { 
         const { country, amount, email, from, message, quantity } = this.props.location.state 
