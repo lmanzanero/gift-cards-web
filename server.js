@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const rateLimit = require("express-rate-limit");
+const morgan = require('morgan')
 
 // load environment variables in dev
 if (process.env.NODE_ENV !== 'production') {
@@ -12,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 const root = require('./routes/api/root')
 const giftcards = require('./routes/api/giftcards')
 const orders = require('./routes/api/orders');
-
+const invoice = require('./routes/api/invoice')
 
 // rate limiting config
 const limiter = rateLimit({
@@ -20,11 +21,11 @@ const limiter = rateLimit({
   max: 100 // limit each IP to 100 requests per windowMs
 });
 
-
 // initialize app
 const app = express();
 
 // middlewares
+app.use(morgan('tiny'))
 app.use(bodyParser.json());
 app.use(limiter);
 
@@ -37,6 +38,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 app.use('/', root);
 app.use('/v1/giftcards', giftcards);
 app.use('/v1/orders', orders);
+app.use('/v1/invoice', invoice);
 
 // set port
 const port = process.env.PORT || 5000;
