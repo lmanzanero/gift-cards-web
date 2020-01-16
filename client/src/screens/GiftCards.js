@@ -1,53 +1,67 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap';
+import { Container, Row  } from 'reactstrap';
 import { Link } from 'react-router-dom'
-
+import Axios from 'axios';
 
 export default class GiftCards extends Component {
-  // state = {
-  //   giftCards: [
-  //     { id: uuid(), src: 'https://lh3.googleusercontent.com/7Rp8nh8n5Y3DdY-YM01O0gSDqa-BwKYlKGzwPMlBvFsOaaHYfVdQ4uJhs-AY_w07dZdsnTFz8XIYeBZ6w7RGfwJeVTt93ISin6rXHA=s0' },
-  //     { id: uuid(), src: 'https://mk0avenuetjo4k1o6nk6.kinstacdn.com/wp-content/uploads/sites/26/2017/10/Amazon.com-gift-card.png' },
-  //     { id: uuid(), src: 'https://lh3.googleusercontent.com/7Rp8nh8n5Y3DdY-YM01O0gSDqa-BwKYlKGzwPMlBvFsOaaHYfVdQ4uJhs-AY_w07dZdsnTFz8XIYeBZ6w7RGfwJeVTt93ISin6rXHA=s0' },
-  //     { id: uuid(), src: 'https://lh3.googleusercontent.com/7Rp8nh8n5Y3DdY-YM01O0gSDqa-BwKYlKGzwPMlBvFsOaaHYfVdQ4uJhs-AY_w07dZdsnTFz8XIYeBZ6w7RGfwJeVTt93ISin6rXHA=s0' },
-  //     { id: uuid(), src: 'https://lh3.googleusercontent.com/7Rp8nh8n5Y3DdY-YM01O0gSDqa-BwKYlKGzwPMlBvFsOaaHYfVdQ4uJhs-AY_w07dZdsnTFz8XIYeBZ6w7RGfwJeVTt93ISin6rXHA=s0' },
-  //   ]
-  // }
+  offset = 0;
+  allLoaded = false;
 
-  // renderGiftCards = () => {
-  //   const { giftCards } = this.state;
-    
-  //   giftCards.map(giftcard => {
-  //     return (
-  //       <div className="gift-cards-item">
-  //         <img src={giftcard.src} alt="card"/>
-  //       </div>
-  //     );
-  //   });
-  //   console.log(giftCards)
-  // }
+  constructor(props) {
+    super(props);
 
-  componentDidMount() {
-
+    this.state = {
+      giftcards: []
+    }
   }
 
-  render() {
-    console.log(this.props.routes)
-    return (
-      <Container className="gift-cards-container" fluid={true}>
-         <h4>Select a Gift Card</h4>
-         <hr className="my-2" />
-        <div className="gift-cards-items"> 
-          <Link to="/gift-card/google-play-card">
+  componentWillMount() {
+    this.loadGiftCards();
+  }
+
+  loadGiftCards = () => {
+    if(!this.allLoaded) {
+      const url = `${process.env.REACT_APP_API_URL}/giftcards?offset=${this.offset}`
+      Axios.get(url)
+        .then(res => {
+
+          if (res.data.number_of_results === 0) {
+            this.allLoaded = true;
+            return;
+          }
+
+          this.setState({giftcards: this.state.giftcards.concat(res.data.brands)})
+          
+        }).catch(error => {
+          console.log(error)
+        })
+    }
+  }
+
+  displayGiftCards = () => {
+    if (this.state.giftcards.length > 0) {
+      console.log(this.state.giftcards)
+      return(
+          this.state.giftcards.map(card => (
+          <Link to={card.brand_code} key={card.brand_code}>
             <div className="gift-cards-item">
-              <img src="https://lh3.googleusercontent.com/7Rp8nh8n5Y3DdY-YM01O0gSDqa-BwKYlKGzwPMlBvFsOaaHYfVdQ4uJhs-AY_w07dZdsnTFz8XIYeBZ6w7RGfwJeVTt93ISin6rXHA=s0" alt="card"/>
+              <img src={card.image_url} alt="card"/>
             </div> 
           </Link>
-          <div className="gift-cards-item">
-            <img src="https://mk0avenuetjo4k1o6nk6.kinstacdn.com/wp-content/uploads/sites/26/2017/10/Amazon.com-gift-card.png" alt="card"/>
-          </div>
-        </div>
-      </Container>
+        ))
+      )
+    }
+  }
+
+
+  render() {
+    return (
+      <div>
+         <h4 id="action-title">Select a Gift Card</h4>
+        <Row className="gift-cards-items"> 
+          { this.displayGiftCards() }
+        </Row>
+      </div>
     );
   }
 }

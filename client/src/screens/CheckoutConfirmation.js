@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
-// import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import uuid from 'uuid';
+
 const order = {
     "name": "Amazon Gift Card",
     "date": "Current Date",
