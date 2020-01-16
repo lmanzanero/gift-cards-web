@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/">
               <GiftCards/>
             </Route>
-            <Route path="/gift-card/:id">
+            <Route path="/giftcard/:id">
               <GiftCard/>
             </Route>
             <Route path="/check-out" component={CheckOut}/> 
