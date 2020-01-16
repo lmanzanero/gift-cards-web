@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 // import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
 const order = {
-    "name": "Amazon Gift Card",
-    "date": "Current Date",
-    "to": "Luis Manzanero",
-    "from": "Reggie Escobar",
-    "message": "Here is your gift",
-    "quantity": 1,
-    "region": "BZ",
-    "serviceFee": 3,
-    "total": 100
+     name: "Amazon Gift Card",
+     date: "Current Date",
+     to: "Luis Manzanero",
+     from: "Reggie Escobar",
+     message: "Here is your gift",
+     quantity: 1,
+     region: "BZ",
+     serviceFee: 3,
+     total: 100
 }
 
 export default class CheckOut extends Component {  
@@ -33,13 +33,16 @@ export default class CheckOut extends Component {
  
 
     saveOrdertoDb = () => {
-        fetch('http://localhost:5000/api/orders/check-out', {
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        fetch(`${proxyurl}http://localhost:5000/api/orders/check-out`, {
         method: 'POST', // or 'PUT' 
         headers: {
+            'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(order),
         }) 
+        .then((response) => response.json())
         .then((data) => {
         console.log('Success:', data);
         })
