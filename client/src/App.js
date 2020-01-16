@@ -9,10 +9,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import GiftCards from './components/GiftCards';
+import GiftCards from './screens/GiftCards';
 import Footer from './components/Footer';
-import GiftCard from './components/GiftCard';
-import CheckOut from './components/CheckoutConfirmation';
+import GiftCard from './screens/GiftCard';
+import CheckOut from './screens/CheckoutConfirmation';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/">
               <GiftCards/>
             </Route>
-            <Route path="/gift-card/:id">
+            <Route path="/giftcard/:id">
               <GiftCard/>
             </Route>
             <Route path="/check-out" component={CheckOut}/> 
