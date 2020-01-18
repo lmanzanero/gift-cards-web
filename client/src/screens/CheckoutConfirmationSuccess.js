@@ -17,7 +17,9 @@ export default class CheckoutConfirmationSuccess extends Component {
 									<img src="https://www.netclipart.com/pp/m/43-434517_gift-cards-png-google-play-card-50.png" alt="Google"/>
 								</div>
 							</div>
-							<button>Continue Shopping</button>
+							<Link to="/">
+								<button>Continue Shopping</button>
+							</Link>
 						</div>  
 				</Row> 
             </Container>

@@ -2,6 +2,7 @@
   margin-left: 67px;
   margin-right: 67px;
   margin-bottom: 67px;
+  min-height: 400px;
 }
 
 .remove-btn {
@@ -92,13 +93,13 @@
   color: #000000;
 } */
 
-#footer-container {
+#footer-container { 
   position: relative;
   background: #000000;
   color: #FFFFFF;
   height: 327px;
   width: '100%';
-  padding-top: 45px;
+  padding-top: 45px;  
 }
 
 .footer-col {
