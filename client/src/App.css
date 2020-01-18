@@ -382,6 +382,91 @@
   color: #000000;
 }
 
+.success-container .title {
+  margin-top: 98px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.success-container .sub-title{
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 34px;
+  margin-bottom: 57px;
+}
+
+.success-container .box {
+  text-align: center;
+  margin: auto;
+}
+
+.success-container .box h5 {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+
+}
+
+.success-container .box-inner { 
+    position: relative;  
+    width: 367px;
+    height: 367px;  
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box; 
+    margin-bottom: 55px;
+}
+
+.success-container .box-inner p {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 19px; 
+  color: #000000;
+}
+
+.success-container .box-inner .hero-container {
+  width: 185px;
+  height: 185px;   
+  background: #EEEEEE;
+  margin: auto;  
+}
+
+.success-container .box-inner img {
+  width: 100%; 
+  height: 100%;
+}
+
+.success-container button{ 
+  background: #0084FF;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px; 
+  height: 46px;
+  width: 216px;
+  color: #FFFFFF;  
+}
+
 .order-details-box {
   margin-top: 25px; 
   width: 100%;
