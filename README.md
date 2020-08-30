@@ -1,4 +1,4 @@
-# Gift Cards Web
+# Ecom Wb App
 
 A e-commernce web demo using MongoDB, Express, ReactJs, NodeJs
 
