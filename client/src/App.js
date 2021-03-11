@@ -13,6 +13,7 @@ import GiftCards from './screens/GiftCards';
 import Footer from './components/Footer';
 import GiftCard from './screens/GiftCard';
 import CheckOut from './screens/CheckoutConfirmation';
+import CheckOutSuccess from './screens/CheckoutConfirmationSuccess'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               <GiftCard/>
             </Route>
             <Route path="/check-out" component={CheckOut}/> 
+            <Route path="/success" component={CheckOutSuccess}/> 
       </div>
       <Footer/>
     </Router>
